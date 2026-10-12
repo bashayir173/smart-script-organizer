@@ -1,0 +1,218 @@
+/* Custom styling & Screenplay typography - Soft Pastel Luxury Aesthetic */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+    --bg-cream: #FAF7F2;
+    --bg-gradient: linear-gradient(135deg, #FAF7F2 0%, #F5F1FA 45%, #F0F4FA 100%);
+    --surface-card: #FFFFFF;
+    --surface-glass: rgba(255, 255, 255, 0.88);
+    --border-pastel: #EAE5F1;
+    --border-hover: #D7CDE8;
+    
+    /* Text colors designed for rich contrast & readability */
+    --text-primary: #1E2532;
+    --text-secondary: #4A5568;
+    --text-muted: #718096;
+    
+    /* Pastel Accents */
+    --pastel-lavender-bg: #EFEBF8;
+    --pastel-lavender-border: #D8D0EE;
+    --pastel-lavender-text: #4C3C7A;
+    
+    --pastel-mint-bg: #E4F6ED;
+    --pastel-mint-border: #BAE8D2;
+    --pastel-mint-text: #166442;
+    
+    --pastel-rose-bg: #FDE8F1;
+    --pastel-rose-border: #F7C8DA;
+    --pastel-rose-text: #962858;
+    
+    --pastel-peach-bg: #FEF1E6;
+    --pastel-peach-border: #FAD9BE;
+    --pastel-peach-text: #944815;
+    
+    --pastel-sky-bg: #E6F1FA;
+    --pastel-sky-border: #C8E1F5;
+    --pastel-sky-text: #195886;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    overflow-x: hidden;
+}
+
+/* Screenplay authentic typography */
+.font-screenplay {
+    font-family: 'Courier Prime', Courier, monospace;
+}
+
+.font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom Pastel Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F3EEF8;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #D5CBE5;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #BAACD6;
+}
+
+/* Glassmorphism Pastel Panels */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(226, 219, 238, 0.85);
+    box-shadow: 0 4px 20px -2px rgba(120, 100, 150, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.glass-panel-subtle {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(232, 226, 242, 0.8);
+    box-shadow: 0 2px 12px -2px rgba(120, 100, 150, 0.04);
+}
+
+.glass-glow-pastel {
+    box-shadow: 0 8px 30px -4px rgba(168, 148, 224, 0.2), 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* Screenplay element styling in Pastel theme */
+.screenplay-slugline {
+    background: linear-gradient(90deg, #F3EEF8 0%, #FFFFFF 100%);
+    border-left: 4px solid #A493E4;
+}
+
+.screenplay-character {
+    color: #4C3C7A;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+}
+
+.screenplay-parenthetical {
+    color: #718096;
+    font-style: italic;
+}
+
+.screenplay-dialogue {
+    color: #1E2532;
+    line-height: 1.55;
+}
+
+.screenplay-action {
+    color: #334155;
+    line-height: 1.6;
+}
+
+/* Pastel micro-animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulseSoft {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; }
+}
+
+.animate-soft-pulse {
+    animation: pulseSoft 2.5s infinite ease-in-out;
+}
+
+/* Comic Panel Grid Styling */
+.panel-card {
+    transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #FFFFFF;
+    border: 1px solid #EAE4F2;
+}
+
+.panel-card:hover {
+    transform: translateY(-2px);
+    border-color: #C7B7E9;
+    box-shadow: 0 8px 24px -4px rgba(140, 120, 180, 0.12), 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+/* Clean Print Screenplay Styles */
+@media print {
+    body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-family: 'Courier Prime', Courier, monospace !important;
+    }
+
+    .no-print, header, aside, .tabs-container, button, #aiModal, #toastContainer, #navSidebar {
+        display: none !important;
+    }
+
+    #mainBreakdownContainer {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .scene-card-item {
+        page-break-inside: avoid;
+        border: none !important;
+        background: transparent !important;
+        padding: 1.5rem 0 !important;
+        box-shadow: none !important;
+        border-bottom: 2px dashed #999 !important;
+    }
+
+    .screenplay-slugline {
+        background: transparent !important;
+        color: #000 !important;
+        border-left: 3px solid #000 !important;
+        font-weight: bold !important;
+    }
+
+    .screenplay-character {
+        color: #000 !important;
+        text-align: center !important;
+        margin-top: 10px !important;
+    }
+
+    .screenplay-parenthetical {
+        color: #333 !important;
+        text-align: center !important;
+    }
+
+    .screenplay-dialogue {
+        color: #000 !important;
+        max-width: 65% !important;
+        margin: 0 auto !important;
+    }
+
+    .screenplay-action {
+        color: #111 !important;
+    }
+
+    .print-only-header {
+        display: block !important;
+    }
+}
+
+.print-only-header {
+    display: none;
+}
